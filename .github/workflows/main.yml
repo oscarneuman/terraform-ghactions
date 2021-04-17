@@ -20,13 +20,13 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-env:
-  ARM_SUBSCRIPTION_ID: '8c56458a-03e1-4e9b-9020-056f4ae0722c'
-  ARM_TENANT_ID: '16f01218-bd69-4b98-adc0-78a02fc7830b'
-  ARM_CLIENT_ID: 'cae524d1-620d-487a-a7c8-80d04efc7b15'
-  ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+    env:
+      ARM_SUBSCRIPTION_ID: '8c56458a-03e1-4e9b-9020-056f4ae0722c'
+      ARM_TENANT_ID: '16f01218-bd69-4b98-adc0-78a02fc7830b'
+      ARM_CLIENT_ID: 'cae524d1-620d-487a-a7c8-80d04efc7b15'
+      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
   
-steps:
+    steps:
 
       - uses: actions/checkout@v2
       - name: Azure Login
