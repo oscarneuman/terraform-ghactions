@@ -1,8 +1,8 @@
 #Create RG for storing State Files
-az group create --location westus2 --name rg-terraformstate
+az group create --location westus2 --name "rg-terraformstate"
 
 #Create Storage Account
-az storage account create --name $1 --resource-group rg-terraformstate --location westus2 --sku Standard_LRS
+az storage account create --name $1 --resource-group "rg-terraformstate" --location westus2 --sku Standard_LRS
 
 #Create Storage Container
 az storage container create --name terraformdemo --account-name $1
