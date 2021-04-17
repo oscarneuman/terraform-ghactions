@@ -36,16 +36,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Build Terraform State
         run: chmod +x ./tfstate.sh && ./tfstate.sh
-        
-      - name: HashiCorp - Setup Terraform
-        uses: hashicorp/setup-terraform@v1.2.1
-        
-      - name: Terraform init
-        run: terraform init
 
-      - name: Terraform Plan
-        run: terraform plan -out=tfplan
-
-      - name: Terraform Apply
-        run: terraform apply tfplan
-        
