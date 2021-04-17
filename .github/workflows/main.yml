@@ -26,8 +26,7 @@ env:
   ARM_CLIENT_ID: 'cae524d1-620d-487a-a7c8-80d04efc7b15'
   ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
   
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
+        steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
