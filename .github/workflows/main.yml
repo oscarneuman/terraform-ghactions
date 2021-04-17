@@ -39,9 +39,6 @@ jobs:
         
       - name: HashiCorp - Setup Terraform
         uses: hashicorp/setup-terraform@v1.2.1
-        
-      - name: Terraform init
-        run: terraform init -backend-config="storage_account_name=${{ env.AZURE_STORAGE }}"
 
       - name: Terraform Plan
         run: terraform plan -out=tfplan
